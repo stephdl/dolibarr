@@ -35,7 +35,7 @@ mkdir -p %{buildroot}/usr/share/%{name}/documents
 
 
 install -d -m 755 %{buildroot}%{_datadir}/%{version}.tar.gz
-cp -r %{name}-%{version}/* %{buildroot}%{_datadir}/%{name}
+cp -r %{name}-%{version}/%{name}-%{version}/* %{buildroot}%{_datadir}/%{name}
 
 
 %files
