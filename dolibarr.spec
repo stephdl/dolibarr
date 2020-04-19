@@ -1,6 +1,6 @@
 Name:           dolibarr
 Version:        11.0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple, modern & fast web-based email client.
 License:        AGPLv3+
 Group:          Networking/CRM
@@ -41,9 +41,13 @@ cp -r %{name}-%{version}/%{name}-%{version}/* %{buildroot}%{_datadir}/%{name}
 %files
 %{_datadir}/%{name}
 %dir %attr(0750,apache,apache) %{_datadir}/%{name}/documents
+%dir %attr(0750,apache,apache) %{_datadir}/%{name}/htdocs/custom
 %post
 %postun
 
 %changelog
+* Sun Apr 19 2020 stephane de labrusse <stephdl@de-labrusse.fr> 1.4.3-2-el7
+- chmod/chown apache:apache custom folder
+
 * Mon Apr 06 2020 stephane de labrusse <stephdl@de-labrusse.fr> 1.4.3-el7
 - first release
