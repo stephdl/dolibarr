@@ -1,7 +1,7 @@
 Name:           dolibarr
-Version:        11.0.3
-Release:        2%{?dist}
-Summary:        Simple, modern & fast web-based email client.
+Version:        11.0.5
+Release:        1%{?dist}
+Summary:        Dolibarr ERP & CRM is a modern software package to manage your organization's activity (contacts, suppliers, invoices, orders, stocks, agenda…).
 License:        AGPLv3+
 Group:          Networking/CRM
 URL:            https://www.dolibarr.org/
@@ -10,15 +10,8 @@ Source0:        https://github.com/Dolibarr/dolibarr/archive/%{version}.tar.gz
 
 BuildArch:      noarch
 
-%description
-RoundCube Webmail is a browser-based multilingual IMAP client
-with an application-like user interface. It provides full
-functionality you expect from an e-mail client, including MIME
-support, address book, folder manipulation, message searching
-and spell checking. RoundCube Webmail is written in PHP and 
-requires a database: MySQL, PostgreSQL and SQLite are known to
-work. The user interface is fully skinnable using XHTML and
-CSS 2.
+%description 
+Dolibarr ERP & CRM is a modern software package to manage your organization's activity (contacts, suppliers, invoic  es, orders, stocks, agenda…).
 
 %prep
 mkdir %{name}-%{version}
@@ -46,8 +39,11 @@ cp -r %{name}-%{version}/%{name}-%{version}/* %{buildroot}%{_datadir}/%{name}
 %postun
 
 %changelog
-* Sun Apr 19 2020 stephane de labrusse <stephdl@de-labrusse.fr> 1.4.3-2-el7
+* Tue Aug 04 2020 stephane de labrusse <stephdl@de-labrusse.fr> 11.0.5
+- Upstream update 
+
+* Sun Apr 19 2020 stephane de labrusse <stephdl@de-labrusse.fr> 
 - chmod/chown apache:apache custom folder
 
-* Mon Apr 06 2020 stephane de labrusse <stephdl@de-labrusse.fr> 1.4.3-el7
+* Mon Apr 06 2020 stephane de labrusse <stephdl@de-labrusse.fr> 11.0.0
 - first release
