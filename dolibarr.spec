@@ -1,5 +1,5 @@
 Name:           dolibarr
-Version:        13.0.3
+Version:        13.0.4
 Release:        1%{?dist}
 Summary:        Dolibarr ERP & CRM is a modern software package to manage your organization's activity (contacts, suppliers, invoices, orders, stocks, agenda…).
 License:        AGPLv3+
@@ -39,6 +39,9 @@ cp -r %{name}-%{version}/%{name}-%{version}/* %{buildroot}%{_datadir}/%{name}
 %postun
 
 %changelog
+* Tue Aug 10 2021  stephane de Labrusse <stephdl@de-labrusse.fr>
+- Bump to 13.0.4
+
 * Fri Jul 02 2021  stephane de Labrusse <stephdl@de-labrusse.fr>
 - Bump to 13.0.3
 
